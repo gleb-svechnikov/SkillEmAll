@@ -1,0 +1,308 @@
+/**
+ * importer.less
+ *
+ * By default, new Sails projects are configured to compile this file
+ * from LESS to CSS.  Unlike CSS files, LESS files are not compiled and
+ * included automatically unless they are imported below.
+ *
+ * The LESS files imported below are compiled and included in the order
+ * they are listed.  Mixins, variables, etc. should be imported first
+ * so that they can be accessed by subsequent LESS stylesheets.
+ *
+ * (Just like the rest of the asset pipeline bundled in Sails, you can
+ * always omit, customize, or replace this behavior with SASS, SCSS,
+ * or any other Grunt tasks you like.)
+ */
+
+
+// For example:
+//
+// @import 'variables/colors.less';
+// @import 'mixins/foo.less';
+// @import 'mixins/bar.less';
+// @import 'mixins/baz.less';
+//
+// @import 'styleguide.less';
+// @import 'pages/login.less';
+// @import 'pages/signup.less';
+//
+// etc.
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h2{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+p{
+	font-size: 16px;
+	font-weight: normal;
+	color: rgb(127, 140, 141);
+	line-height: 30px;
+}
+a:hover,
+a:-webkit-any-link{
+	text-decoration: none;
+}
+table{
+	tr:hover td{
+		background: rgba(100,100,100,0.05);
+	}
+	td.id{
+
+	}
+	.id{
+		width: 40px;
+		text-align: right;
+		padding-right: 20px;
+	}
+	.name{
+		width: 180px;
+	}
+	.email{
+		width: 180px;
+	}
+	.description{
+		width: 300px;
+		text-align: left
+	}
+	.avatar{
+		width: 100px;
+		img{
+			max-width: 100px;
+			max-height: 50px;
+			margin: 10px 0;
+		}
+	}
+	.twitter,
+	.facebook{
+		width: 100px;
+	}
+}
+
+form{
+	margin: 20px;
+	label{
+		width: 150px;
+		margin-bottom: 20px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	input, textarea{
+		width: 250px;
+	}
+	input.picture{
+		width: 250px;
+		height: 250px
+		border: 2px dotted gray;
+		display: block;
+	}
+
+}
+header{
+	float: left;
+	height: 150px;
+	width: 100%;
+	box-sizing: border-box;
+	.limiter{
+		width: 1200px;
+		margin: 20px auto;
+		h1{
+			width: 290px;
+			float: left;
+			font-weight: 600;
+			font-size: 40px;
+			a{
+				color: rgb(44, 62, 80);
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			
+		}
+		nav{
+			width: 680px;
+			float: right;
+			margin-top: 20px;
+			text-align: right;
+			a{
+				margin: 0 20px;
+				padding: 35px 0 21px;
+				font-size: 13px;
+				font-weight: normal;
+				color: rgb(127, 140, 141);
+				font-weight: 500;
+				letter-spacing: 2px;
+				color: rgb(149, 165, 166);
+				&:hover{
+					color: rgb(26, 188, 156);
+				}
+			}
+			button{
+				background-color: rgb(22, 160, 133);
+				border: 1px solid rgb(22, 160, 133);
+				padding: 10px 26px;
+				font-size: 14px;
+				font-weight: normal;
+				color: rgb(255, 255, 255);
+				border-radius: 6px;
+				margin-right: 0;
+				cursor: pointer;
+			}
+		}
+	}
+	
+}
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	box-sizing: border-box;
+	section{
+		display: block;
+		float: left;
+		width: 100%;
+		height: auto;
+		margin: 0 auto 50px auto;
+		h2{
+			margin-bottom: 30px;
+		}
+		&.intro{
+			.text{
+				width: 880px;
+				float: left;
+				.point{
+					width: 250px;
+					height: 200px;
+					float: left;
+					margin-right: 30px;
+				}	
+			}
+			
+			img{
+				float: left;
+				width: 300px;
+				height: 300px;
+				margin-left: 20px;
+				margin-top: 0px;
+			}
+		}
+		&.lessons{
+			.lesson{
+				width: 250px;
+				float: left;
+				margin-right: 66px;
+				position: relative;
+				height: 300px;
+				overflow: hidden;
+				&:nth-child(5n+5){
+					margin-right: 0;
+				}
+				h3{
+					color: black;
+					background: rgba(255,255,255,0.8);
+					display: block;
+					max-height: 90px;
+					margin-top: 100px;
+					margin-bottom: 0;
+					padding-bottom: 20px;
+					padding-left: 5px;
+
+				}
+				p{
+					background: white;
+					height: 160px;
+				}
+				img{
+					width: 100%;
+					position: absolute;
+					z-index: -1;
+					
+				}
+			}
+		}
+		&.experts{
+			.expert{
+				width: 340px;
+				float: left;
+				margin-right: 85px;
+				margin-bottom: 50px;
+				position: relative;
+				height: 350px;
+				overflow: hidden;
+				&:nth-child(4),
+				&:nth-child(7){
+					margin-right: 0;
+				}
+				h3{
+					margin-top: 150px;
+					color: #fff;
+					min-height: 40px;
+					padding-left: 5px;
+					background: rgba(0,0,0,0.4);
+					margin-bottom: 0;
+				}
+				p{
+					height: 140px;
+					font-size: 14px;
+					color: rgb(127, 140, 141);
+					background: white;
+					margin: 0;
+					padding-bottom: 20px;
+				}
+				img{
+					width: 100%;
+					position: absolute;
+					z-index: -1;
+				}
+				
+				.socials{
+					text-align: center;
+					background: #fff;
+					a{
+						background: white;
+						font-size: 24px;
+						width: 24px;
+						height: 24px;
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer{
+	width: 100%;
+	float: left;
+	height: 150px;
+	background-color: rgb(52, 73, 94);
+	text-align: center;
+	padding: 20px;
+	color: rgb(186, 193, 200);
+	box-sizing: border-box;
+	button{
+		background-color: rgb(22, 160, 133);
+		border: 1px solid rgb(22, 160, 133);
+		padding: 10px 26px 10px 40px;
+		font-size: 14px;
+		font-weight: normal;
+		color: rgb(255, 255, 255);
+		border-radius: 6px;
+		margin-right: 0; 
+		position: relative;
+		cursor: pointer;
+		i{
+			color: rgb(210, 217, 224);
+			margin-right: 10px;
+			font-size: 22px;
+			position: absolute;
+			left: 15px;
+		}
+	}
+}

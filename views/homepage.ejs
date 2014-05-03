@@ -1,0 +1,41 @@
+<section class="intro">
+	<div class="text">
+		<h2>Бесплатные интернет-уроки от первоклассных экспертов</h2>
+		<p>C помощью наших уроков вы сможете быстро вникнуть в определенные профессиональные темы тем самым улучшить навыки по определенным областям.</p>
+		<div class="point">
+			<h3>От экспертов</h3>
+			<p>Уроки состоят из материалов, подобранных экспертами.</p>
+		</div>
+		<div class="point">
+			<h3>2-3 часа</h3>
+			<p>Освоение одного урока требует не более одного вечера.</p>
+		</div>
+		<div class="point">
+			<h3>Разбиты по темами</h3>
+			<p>Материалы разбиты по темам для удобного поиска.</p>
+		</div>
+	</div>
+	<img src="/images/girl_study.jpg" alt="girl_study" />
+</section>
+<section class="lessons" ng-controller="lessonController">
+	<h2>Уроки</h2>
+	<div class="lesson" ng-repeat="lesson in lessons" ng-click="loadLesson(lesson.id)">
+		<img src="{{lesson.pic}}"  />
+		<h3>{{lesson.name}}</h3>
+		<p>{{lesson.description | limitTo: 100}}</p>
+	</div>
+</section>
+<section class="experts" ng-controller="expertController">
+	<h2>Эксперты</h2>
+	<div class="expert" ng-repeat="expert in experts">
+		<img src="{{expert.avatar}}" alt="" />
+		<h3>{{expert.name}}</h3>
+		<p>{{expert.description | limitTo: 120}}</p>
+		<div class="socials"> 
+			<a href="#" class="fa fa-linkedin"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-facebook"></a>
+		</div>
+	</div>
+	
+</section>

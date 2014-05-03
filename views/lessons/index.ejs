@@ -1,0 +1,36 @@
+<section ng-controller="lessonController">
+	<form ng-submit="submitLesson(appData, 'lesson')">
+		<label for="">Lesson name</label> <input type="text" name="name" ng-model="appData.name"/><br/>
+ 		<label>Picture(url)</label> <input type="url" name="pic" ng-model="appData.pic" /><br/> 
+ 		<label>Owner</label>  		
+ 		<select>
+ 			<option ng-repeat="expert in experts" value="{{expert.id}}">{{expert.name}}</option>
+ 		</select>
+ 		<br/>
+ 		<label for="">Description</label> <textarea ng-model="appData.description"></textarea></br> 
+		<button type="submit">Save</button>
+	</form>	
+ 	<ul>
+ 	<table>
+ 		<thead>
+ 			<tr>
+ 				<th class="id">ID</th>
+ 				<th class="name" >Name</th>
+ 				<th class="avatar">Avatar(URL)</th>
+ 				<th class="facebook">Owner</th>
+ 				<th class="description">Description</th>
+ 				<th class="action">Remove</th>
+ 			</tr>
+ 		</thead>
+ 	 	<tbody>
+ 	 		<tr ng-repeat="lesson in lessons">
+ 	 			<td class="id">{{lesson.id}}</td>
+ 	 			<td class="name">{{lesson.name}}</td>
+ 	 			<td class="avatar"><img src="{{lesson.pic}}" alt="" /> </td>
+ 	 			<td class="owner">{{lesson.owner}}</a></td>
+ 	 			<td class="description">{{lesson.description}}</td>
+ 	 			<td><button ng-click="deleteLesson(lesson.id, 'lesson')">x</button></td>
+ 	 		</tr>
+ 	 	</tbody>
+ 	</table>
+</section>
