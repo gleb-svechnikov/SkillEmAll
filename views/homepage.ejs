@@ -29,8 +29,8 @@
 	<h2>Эксперты</h2>
 	<div class="expert" ng-repeat="expert in experts">
 		<img src="{{expert.avatar}}" alt="" ng-click="loadAuthor(expert.id)"/>
-		<h3 ng-click="loadAuthor(expert.id)" >{{expert.name}}</h3>
-		<p ng-click="loadAuthor(expert.id)">{{expert.description | limitTo: 150}}</p>
+		<h3 ng-click="loadAuthor(expert.id)" ng-click="loadAuthor(expert.id)">{{expert.name}}</h3>
+		<p ng-click="loadAuthor(expert.id)" ng-click="loadAuthor(expert.id)">{{expert.description | limitTo: 150}}</p>
 		<div class="socials"> 
 			<a href="{{expert.linkedin}}" class="fa fa-linkedin" target="_blank"></a>
 			<a href="{{expert.twitter}}" class="fa fa-twitter" target="_blank"></a>

@@ -5,7 +5,6 @@
 	<p>{{author.description}}</p>
 	<h3>Уроки автора</h3>
 	<ul>
-		<p ng-repeat="lesson in lessons">{{lesson.name}}</p>	
+		<a href=""><li ng-repeat="lesson in lessons | filter: { ownerID: author.id}" ng-click="loadLesson(lesson.id)">{{lesson.name}}</li></a>	
 	</ul>
-	
 </section>

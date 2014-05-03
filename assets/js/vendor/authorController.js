@@ -1,6 +1,7 @@
 myApp.controller('authorController', function($scope,$http, dataService){
 
 	$scope.author = {};
+	$scope.lessons = {};
 	var id = window.location.search.substring(1).split("=")[1];
 	 
 	
@@ -11,7 +12,22 @@ myApp.controller('authorController', function($scope,$http, dataService){
 		.error(function(data){
 			console.log(data);
 		});	
+		
+	
+	dataService.get('lesson')
+		.success(function(data){
+			$scope.lessons = data;
+		})
+		.error(function(data){
+			console.log(data);
+		});	
+		
+	$scope.loadLesson = function(id){
+		console.log(id)
+		document.location.href='/item?id='+id;
 
+		
+	}
 	
 	$scope.submitLesson = function(appData, model){
 		dataService.store(appData, model)
