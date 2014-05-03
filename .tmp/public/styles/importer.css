@@ -36,6 +36,10 @@ a:-webkit-any-link {
   text-decoration: none;
   color: #1abc9c;
 }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 table tr:hover td {
   background: rgba(100, 100, 100, 0.05);
 }
@@ -177,6 +181,7 @@ header .limiter nav button {
   position: relative;
   height: 300px;
   overflow: hidden;
+  cursor: pointer;
 }
 .wrapper section.lessons .lesson:nth-child(5n+5) {
   margin-right: 0;
@@ -209,6 +214,7 @@ header .limiter nav button {
   position: relative;
   height: 340px;
   overflow: hidden;
+  cursor: pointer;
 }
 .wrapper section.experts .expert:nth-child(3n+4) {
   margin-right: 0;
@@ -243,9 +249,11 @@ header .limiter nav button {
   font-size: 24px;
   width: 24px;
   height: 24px;
+  color: gray;
 }
 .wrapper section.experts .expert .socials a:hover {
   text-decoration: none;
+  color: #1abc9c;
 }
 footer {
   width: 100%;

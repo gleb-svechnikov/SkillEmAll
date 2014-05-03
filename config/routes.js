@@ -35,6 +35,9 @@ module.exports.routes = {
   '/lessons': {
     view: 'lessons/index'
   },
+  '/links': {
+    view: 'links/index'
+  },
   '/add-lesson': {
     view: 'add-lesson/index'
   },
@@ -43,6 +46,9 @@ module.exports.routes = {
   },
   '/author': {
     view: 'author/index'
+  },
+  '/about': {
+    view: 'about/index'
   },
 
   // Custom routes here...

@@ -1,0 +1,36 @@
+<section ng-controller="linksController">
+	<form ng-submit="submitLink(appData, 'link')">
+		<label for="">Link name</label> <input type="text" name="name" ng-model="appData.name"/><br/>
+ 		<label>URL</label> <input type="url" name="pic" ng-model="appData.url" /><br/> 
+ 		<label>Lesson</label>  		
+ 		<select ng-model="appData.lessonID">
+ 			<option ng-repeat="lesson in lessons" value="{{lesson.id}}">{{lesson.name}}</option>
+ 		</select>
+ 		<br/>
+ 		<label for="">Description</label> <textarea ng-model="appData.description"></textarea></br> 
+		<button type="submit">Save</button>
+	</form>	
+ 	<ul>
+ 	<table>
+ 		<thead>
+ 			<tr>
+ 				<th class="id">ID</th>
+ 				<th class="name" >Name</th>
+ 				<th class="url">URL</th>
+ 				<th class="lesson">Lesson</th>
+ 				<th class="description">Description</th>
+ 				<th class="action">Remove</th>
+ 			</tr>
+ 		</thead>
+ 	 	<tbody>
+ 	 		<tr ng-repeat="link in links">
+ 	 			<td class="id">{{link.id}}</td>
+ 	 			<td class="name">{{link.name}}</td>
+ 	 			<td class="url">{{link.url}}</td>
+ 	 			<td class="owner">{{link.lessonID}}</a></td>
+ 	 			<td class="description">{{link.description}}</td>
+ 	 			<td><button ng-click="deleteLink(link.id, 'link')">x</button></td>
+ 	 		</tr>
+ 	 	</tbody>
+ 	</table>
+</section>

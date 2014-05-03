@@ -20,6 +20,9 @@ myApp.factory('dataService', function($http){
 		},
 		getItem: function(id, model){
 			return $http.get('/'+model+'?id='+id)
+		},
+		findByID: function(id, model){
+			return $http.get('/'+model+'/find/id='+id)
 		}
 	}
 })

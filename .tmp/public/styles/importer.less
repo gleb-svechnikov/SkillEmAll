@@ -52,6 +52,8 @@ a:-webkit-any-link{
 	color: rgb(26, 188, 156);
 }
 table{
+	border-collapse: collapse;
+	border-spacing: 0;
 	tr:hover td{
 		background: rgba(100,100,100,0.05);
 	}
@@ -202,6 +204,8 @@ header{
 				position: relative;
 				height: 300px;
 				overflow: hidden;
+				cursor: pointer;
+
 				&:nth-child(5n+5){
 					margin-right: 0;
 				}
@@ -238,6 +242,7 @@ header{
 				position: relative;
 				height: 340px;
 				overflow: hidden;
+				cursor: pointer;
 				&:nth-child(3n+4){
 					margin-right: 0;
 				}
@@ -271,8 +276,10 @@ header{
 						font-size: 24px;
 						width: 24px;
 						height: 24px;
+						color: gray;
 						&:hover{
 							text-decoration: none;
+							color: rgb(26, 188, 156);
 						}
 					}
 				}

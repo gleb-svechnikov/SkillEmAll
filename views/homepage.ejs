@@ -27,15 +27,14 @@
 </section>
 <section class="experts" ng-controller="expertController" >
 	<h2>Эксперты</h2>
-	<div class="expert" ng-repeat="expert in experts" ng-click="loadAuthor(expert.id)">
-		<img src="{{expert.avatar}}" alt="" />
-		<h3>{{expert.name}}</h3>
-		<p>{{expert.description | limitTo: 150}}</p>
+	<div class="expert" ng-repeat="expert in experts">
+		<img src="{{expert.avatar}}" alt="" ng-click="loadAuthor(expert.id)"/>
+		<h3 ng-click="loadAuthor(expert.id)" >{{expert.name}}</h3>
+		<p ng-click="loadAuthor(expert.id)">{{expert.description | limitTo: 150}}</p>
 		<div class="socials"> 
-			<a href="#" class="fa fa-linkedin"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-facebook"></a>
+			<a href="{{expert.linkedin}}" class="fa fa-linkedin" target="_blank"></a>
+			<a href="{{expert.twitter}}" class="fa fa-twitter" target="_blank"></a>
+			<a href="{{expert.facebook}}" class="fa fa-facebook" target="_blank"></a>
 		</div>
 	</div>
-	
 </section>
