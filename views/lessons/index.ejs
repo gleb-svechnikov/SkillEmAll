@@ -3,7 +3,7 @@
 		<label for="">Lesson name</label> <input type="text" name="name" ng-model="appData.name"/><br/>
  		<label>Picture(url)</label> <input type="url" name="pic" ng-model="appData.pic" /><br/> 
  		<label>Owner</label>  		
- 		<select>
+ 		<select ng-model="appData.ownerID">
  			<option ng-repeat="expert in experts" value="{{expert.id}}">{{expert.name}}</option>
  		</select>
  		<br/>
@@ -27,7 +27,7 @@
  	 			<td class="id">{{lesson.id}}</td>
  	 			<td class="name">{{lesson.name}}</td>
  	 			<td class="avatar"><img src="{{lesson.pic}}" alt="" /> </td>
- 	 			<td class="owner">{{lesson.owner}}</a></td>
+ 	 			<td class="owner">{{lesson.ownerID}}</a></td>
  	 			<td class="description">{{lesson.description}}</td>
  	 			<td><button ng-click="deleteLesson(lesson.id, 'lesson')">x</button></td>
  	 		</tr>

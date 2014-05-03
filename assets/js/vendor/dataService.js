@@ -22,7 +22,9 @@ myApp.factory('dataService', function($http){
 			return $http.get('/'+model+'?id='+id)
 		},
 		findByID: function(id, model){
-			return $http.get('/'+model+'/find/id='+id)
+			var path = '/'+model+'/find?id='+id;
+			console.warn(path)
+			return $http.get(path)
 		}
 	}
 })

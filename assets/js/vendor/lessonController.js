@@ -1,11 +1,19 @@
 myApp.controller('lessonController', function($scope,$http, dataService){
 
 	$scope.lessons = {};
-	$scope.links = {};
-
+	$scope.experts = {};
+	
 	dataService.get('lesson')
 		.success(function(data){
 			$scope.lessons = data;
+		})
+		.error(function(data){
+			console.log(data);
+		});	
+	
+	dataService.get('expert')
+		.success(function(data){
+			$scope.experts = data;
 		})
 		.error(function(data){
 			console.log(data);
