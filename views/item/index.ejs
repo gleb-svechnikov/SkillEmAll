@@ -1,9 +1,10 @@
-<section ng-controller="singleLesson">
+<section ng-controller="singleLesson" class="single_lesson" class="ng-cloak">
+	<img src="{{lesson.pic}}" align="right">
+
 	<h2>{{lesson.name}} </h2>
 	<em>Урок создан {{lesson.createdAt | date: 'shortDate'}}</em><br/>
 	<strong>Автор: {{author.name}}</strong>
-	<img src="{{lesson.pic}}">
-	<p>{{lesson.description}}</p>
+	<p class="description">{{lesson.description}}</p>
 	<ol>
 	<li ng-repeat="link in links | filter: { lessonID: lesson.id}">
 		<a href="{{link.url}}">{{ link.name }}</a>

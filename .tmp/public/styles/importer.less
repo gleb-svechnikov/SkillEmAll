@@ -27,7 +27,9 @@
 // @import 'pages/signup.less';
 //
 // etc.
-
+.ng-cloak {
+    opacity: 0;
+}
 body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0;
@@ -206,7 +208,7 @@ header{
 				overflow: hidden;
 				cursor: pointer;
 				margin-bottom: 20px;
-				&:nth-child(5n+5){
+				&:nth-child(4n+5){
 					margin-right: 0;
 				}
 				h3{
@@ -231,6 +233,15 @@ header{
 					z-index: -1;
 					
 				}
+			}
+		}
+		&.single_lesson{
+			img{
+				max-height: 200px;
+				margin-left: 30px;
+			}
+			.description{
+				min-height: 100px;
 			}
 		}
 		&.experts{
