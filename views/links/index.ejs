@@ -15,9 +15,9 @@
  		<thead>
  			<tr>
  				<th class="id">ID</th>
- 				<th class="name" >Name</th>
+ 				<th class="name">Name</th>
  				<th class="url">URL</th>
- 				<th class="lesson">Lesson</th>
+ 				<th class="lesson">Lesson ID</th>
  				<th class="description">Description</th>
  				<th class="action">Remove</th>
  			</tr>
@@ -26,8 +26,8 @@
  	 		<tr ng-repeat="link in links">
  	 			<td class="id">{{link.id}}</td>
  	 			<td class="name">{{link.name}}</td>
- 	 			<td class="url">{{link.url}}</td>
- 	 			<td class="owner">{{link.lessonID}}</a></td>
+ 	 			<td class="url"><a href="{{link.url}}">Link</a></td>
+ 	 			<td class="lesson">{{link.lessonID}}</a></td>
  	 			<td class="description">{{link.description}}</td>
  	 			<td><button ng-click="deleteLink(link.id, 'link')">x</button></td>
  	 		</tr>
