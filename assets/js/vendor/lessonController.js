@@ -1,6 +1,7 @@
 myApp.controller('lessonController', function($scope,$http, dataService){
 
 	$scope.lessons = {};
+	$scope.links = {};
 
 	dataService.get('lesson')
 		.success(function(data){
@@ -9,6 +10,8 @@ myApp.controller('lessonController', function($scope,$http, dataService){
 		.error(function(data){
 			console.log(data);
 		});	
+		
+	
 	
 	$scope.submitLesson = function(appData, model){
 		dataService.store(appData, model)
@@ -42,5 +45,7 @@ myApp.controller('lessonController', function($scope,$http, dataService){
 
 		
 	}
+	
+	
 
 })

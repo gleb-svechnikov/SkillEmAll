@@ -2,4 +2,8 @@
 	<h2>{{lesson.name}} </h2>Урок создан <small >{{lesson.createdAt | date: 'shortDate'}}</small>
 	<img src="{{lesson.pic}}">
 	<p>{{lesson.description}}</p>
+	<div ng-repeat="link in links | filter: { lessonID: lesson.id}">
+		<a href="{{link.url}}">{{ link.name }}</a>
+		<p>{{ link.description }}</p>
+	</div>
 </section>

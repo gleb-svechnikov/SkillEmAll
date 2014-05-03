@@ -1,8 +1,17 @@
 myApp.controller('singleLesson', function($scope,$http, dataService){
 
 	$scope.lesson = {};
+	$scope.links = {};
 	var id = window.location.search.substring(1).split("=")[1];
-	 
+	
+	dataService.get('link')
+		.success(function(data){
+			console.log(data)
+			$scope.links = data;
+		})
+		.error(function(data){
+			console.log(data);
+		});	
 	
 	dataService.getItem(id, 'lesson')
 		.success(function(data){
