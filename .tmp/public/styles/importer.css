@@ -179,9 +179,10 @@ header .limiter nav button {
   float: left;
   margin-right: 66px;
   position: relative;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 .wrapper section.lessons .lesson:nth-child(5n+5) {
   margin-right: 0;
@@ -265,7 +266,7 @@ footer {
   color: #bac1c8;
   box-sizing: border-box;
 }
-footer button {
+footer a.btn {
   background-color: #16a085;
   border: 1px solid #16a085;
   padding: 10px 26px 10px 40px;
@@ -277,7 +278,7 @@ footer button {
   position: relative;
   cursor: pointer;
 }
-footer button i {
+footer a.btn i {
   color: #d2d9e0;
   margin-right: 10px;
   font-size: 22px;
