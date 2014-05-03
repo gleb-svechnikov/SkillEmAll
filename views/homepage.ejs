@@ -25,12 +25,12 @@
 		<p>{{lesson.description | limitTo: 100}}</p>
 	</div>
 </section>
-<section class="experts" ng-controller="expertController">
+<section class="experts" ng-controller="expertController" >
 	<h2>Эксперты</h2>
-	<div class="expert" ng-repeat="expert in experts">
+	<div class="expert" ng-repeat="expert in experts" ng-click="loadAuthor(expert.id)">
 		<img src="{{expert.avatar}}" alt="" />
 		<h3>{{expert.name}}</h3>
-		<p>{{expert.description | limitTo: 120}}</p>
+		<p>{{expert.description | limitTo: 150}}</p>
 		<div class="socials"> 
 			<a href="#" class="fa fa-linkedin"></a>
 			<a href="#" class="fa fa-twitter"></a>

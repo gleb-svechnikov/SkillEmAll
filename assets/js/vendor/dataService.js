@@ -17,6 +17,9 @@ myApp.factory('dataService', function($http){
 		destroy: function(id, model){
 			var path = '/' + model + '/destroy/?id=' + id;		
 			return $http.delete(path);
+		},
+		getItem: function(id, model){
+			return $http.get('/'+model+'?id='+id)
 		}
 	}
 })

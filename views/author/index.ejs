@@ -1,0 +1,11 @@
+
+<section ng-controller="authorController">
+	<h2>{{author.name}}</h2>
+	<img src="{{author.avatar}}">
+	<p>{{author.description}}</p>
+	<h3>Уроки автора</h3>
+	<ul>
+		<p ng-repeat="lesson in lessons">{{lesson.name}}</p>	
+	</ul>
+	
+</section>

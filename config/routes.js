@@ -41,7 +41,9 @@ module.exports.routes = {
   '/item': {
     view: 'item/index'
   },
-
+  '/author': {
+    view: 'author/index'
+  },
 
   // Custom routes here...
 

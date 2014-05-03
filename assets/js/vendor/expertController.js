@@ -31,5 +31,10 @@ myApp.controller('expertController', function($scope,$http, dataService){
 					});	
 			});
 	};
+	$scope.loadAuthor = function(id){
+		console.log(id)
+		document.location.href='/author?id='+id;
+		
+	}
 	
 })

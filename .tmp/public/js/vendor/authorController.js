@@ -1,16 +1,17 @@
-myApp.controller('singleLesson', function($scope,$http, dataService){
+myApp.controller('authorController', function($scope,$http, dataService){
 
-	$scope.lesson = {};
+	$scope.author = {};
 	var id = window.location.search.substring(1).split("=")[1];
 	 
 	
-	dataService.getItem(id, 'lesson')
+	dataService.getItem(id, 'expert')
 		.success(function(data){
-			$scope.lesson = data;
+			$scope.author = data;
 		})
 		.error(function(data){
 			console.log(data);
 		});	
+
 	
 	$scope.submitLesson = function(appData, model){
 		dataService.store(appData, model)
@@ -38,5 +39,11 @@ myApp.controller('singleLesson', function($scope,$http, dataService){
 				console.log(data);
 			});
 	};
+	$scope.loadLesson = function(id){
+		console.log(id)
+		document.location.href='/item?id='+id;
+
+		
+	}
 
 })

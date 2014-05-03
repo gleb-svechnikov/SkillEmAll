@@ -1,10 +1,12 @@
 myApp.controller('singleLesson', function($scope,$http, dataService){
 
-	$scope.lessons = {};
-
-	dataService.get('lesson')
+	$scope.lesson = {};
+	var id = window.location.search.substring(1).split("=")[1];
+	 
+	
+	dataService.getItem(id, 'lesson')
 		.success(function(data){
-			$scope.lessons = data;
+			$scope.lesson = data;
 		})
 		.error(function(data){
 			console.log(data);

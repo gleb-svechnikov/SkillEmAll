@@ -11,12 +11,7 @@ module.exports = {
 	name: 'string',
 	title: 'string',
 	description: 'string',
-/*
-	owner: {
-      required: false,
-      model: 'expert',
-    },
-*/
+	ownerID: 'string',
     pic: 'string'
   }
 
